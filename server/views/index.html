@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Node
+    </title>
+    <script rel="text/javascript" src="/javascripts/jquery.js">
+    </script>
+    <script rel="text/javascript" src="/javascripts/modernizr.foundation.js">
+    </script>
+    <script rel="text/javascript" src="/javascripts/foundation.min.js">
+    </script>
+    <script rel="text/javascript" src="/javascripts/app.js">
+    </script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="/stylesheets/foundation.css">
+  </head>
+  <body>
+    <div class="row">
+      <div class="twelve columns text-center">
+        <div class="panel">
+          <h1>
+            Led Controller
+          </h1>
+          <h5 class="subheader">
+       	Control stuff with your raspberry Pi
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns centered">
+        <div class="panel">
+          <div class="row">
+            <div class="six columns">
+              <a class="button large on">
+                On
+              </a>
+            </div>
+            <div class="six columns">
+              <a class="button large off">
+                Off
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $('.on').click(function(){
+        $.get('/on');
+      });
+      $('.off').click(function(){
+        $.get('/off');
+      });
+    </script>
+  </body>
+</html>
